@@ -81,7 +81,7 @@ class Worker(object):
                 gamenumber += 1
                 self.makenewgame()
 
-            if gamenumber == 1:
+            if gamenumber == 15:
                 done = True
         final_fitness = current_max_fitness / 30
         return final_fitness
