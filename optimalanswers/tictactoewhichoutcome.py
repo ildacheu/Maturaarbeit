@@ -230,16 +230,17 @@ class game:
     def draw(self, decisionplayer, index, i, r, fieldX, fieldO, dict):
         integer = int(decisionplayer)
         if integer in fieldX or integer in fieldO:
-            #print("You bloody idiot")
+            #print("A number between 1 and 9")
             notvalueable = "not"
             self.win(r, fieldX, fieldO)
             self.fitness(r, notvalueable, fieldX, fieldO)
             self.reutrn_values(i, r, fieldX, fieldO, dict, fitnessp)
         elif not 1 <= integer <= 9:
-            print("You bloody idiot")
+            print("Already occupied")
             self.win(r, fieldX, fieldO)
             self.fitness(r, fitnessp, fieldX, fieldO)
             self.reutrn_values(i, r, fieldX, fieldO, dict, fitnessp)
+
         else:
             field = "field" + decisionplayer
             dict[field] = index
